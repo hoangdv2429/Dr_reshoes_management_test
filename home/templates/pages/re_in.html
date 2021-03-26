@@ -1,0 +1,16 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<br>
+<form action="." method = "POST">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+    </table>
+    <input type="submit" value="Input">
+</form>
+{% endblock %}

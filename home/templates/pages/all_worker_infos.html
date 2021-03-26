@@ -1,0 +1,39 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+all_worker_infos
+{% endblock %}
+
+{% block content %}
+<h1>Mọi thông tin về worker</h1>
+<p></p>
+<style type="text/css">
+    td
+    {
+        padding:0 20px;
+    }
+    th
+    { 
+        padding:0 20px;
+    }
+</style>
+<table border="1">
+    <tr>
+        <th> worker_id </th>
+        <th> name </th>
+        <th> dob </th>
+        <th> address </th>
+        <th> phone numbers </th>
+
+    </tr>
+    {% for da in data %}
+    <tr> 
+        <td>{{ da.worker_id }}</td>
+        <td>{{ da.name }}</td>
+        <td>{{ da.dob }}</td>
+        <td>{{ da.address }}</td>
+        <td>{{ da.phone_num }}</td> 
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

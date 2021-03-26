@@ -1,0 +1,37 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+all_cashier_infos
+{% endblock %}
+
+{% block content %}
+<h1>Mọi thông tin về cashier</h1>
+<style type="text/css">
+    td
+    {
+        padding:0 20px;
+    }
+    th
+    { 
+        padding:0 20px;
+    }
+</style>
+<table border="1">
+    <tr>
+        <th> ID thu ngân </th>
+        <th> Tên </th>
+        <th> Địa chỉ </th>
+        <th> Số điện thoại </th>
+        <th> Số ngày làm </th>
+    </tr>
+    {% for da in data %}
+    <tr> 
+        <td>{{ da.cashier_id }}</td>
+        <td>{{ da.name }}</td>
+        <td>{{ da.address }}</td>
+        <td>{{ da.phone_num }}</td>
+        <td>{{ da.num_of_work_days }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

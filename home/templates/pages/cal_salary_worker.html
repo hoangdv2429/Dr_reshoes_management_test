@@ -1,0 +1,38 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+cal_salary_worker
+{% endblock %}
+
+{% block content %}
+<h1>thông tin về tiền lương worker</h1>
+<br>
+<style type="text/css">
+    td
+    {
+        padding:0 20px;
+    }
+    th
+    { 
+        padding:0 20px;
+    }
+</style>
+<table>
+    <tr>
+        <th> worker_id </th>
+        <th> name </th>
+        <th> paycheck </th>
+    </tr>
+    {% for da in data %}
+    <tr> 
+        <td>{{ da.worker_id }}</td>
+        <td>{{ da.name }}</td>
+        <td>{{ da.paycheck }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<!-- {% for da in data %}
+{{da}}
+{% endfor %} -->
+
+{% endblock %}

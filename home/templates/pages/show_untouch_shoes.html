@@ -1,0 +1,36 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+{% for da in take%}
+{{da}}
+{% endfor %}
+
+<table {
+border-spacing: 10px;
+border-collapse: separate; }
+border="1" 
+>
+    <tr>
+        <th> taken_day </th>
+        <th> receipt_id </th>
+        <th> service_id </th>
+    </tr>
+    {% for da in data %}
+    <tr> 
+        <td>{{ da.taken_day }}</td>
+        <td>{{ da.receipt_id }}</td>
+        <td>{{ da.service_id }}</td>
+    </tr>
+    <br>
+    {% endfor %}
+</table>
+
+{% endblock %}
+<!-- tôi miêu tả ô tư duy ? ok ko
+VD khi đăng nhập nó đến trang /a
+đúng r :))
+thêm cái-->

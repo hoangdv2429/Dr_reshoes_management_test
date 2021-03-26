@@ -1,0 +1,21 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<h1>Login</h1>
+<br>
+<form action="." method = "POST">
+    {% csrf_token %}
+    <table>
+    {{form.as_table}}
+    </table>
+    <input type="submit" value="Login">
+</form>
+<p>{{thong_bao}}</p>
+{% endblock %}
+<!--thu di-->

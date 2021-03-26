@@ -1,0 +1,49 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<center><h1>Giao diện thu ngân!</h1></center>
+<br>
+<a href="home/re_in/">1. Nhập hoá đơn mới</a>
+<br>
+<a href="home/se_in">1.1 nhập thông in hoá đơn</a>
+<br>
+<a href="">2. hiển thị thông tin của khách tra theo mã hoá đơn</a>
+<br>
+<a href="home/search_cus_data_phone_num">2.1 hiển thị thông tin của khách tra theo số điện thoại</a>
+<br>
+<a href="">2.3 Chỉnh sửa thông tin của khách hàng</a>
+<br>
+<a href="">3. hiển thị thông tin các hoá đơn của khách tra theo số điện thoại</a>
+<br>
+<a href="">3.1 hiển thị thông tin các hoá đơn của khách tra theo mã khách hàng</a>
+<br>
+<a href="">4. Xem trạng thái của các đôi giày trong mã hoá đơn đã ghi</a>
+<br>
+<a href="">5. Tìm cashier nào nhận đơn dựa vào mã hoá đơn</a>
+<br>
+<a href="home/show_done_not_yet_return/">6. Liệt kê những đôi giày nào được làm nhưng chưa được trả</a>
+<br>
+<a href="">7. update ngày lấy giày của khách</a> 
+<br>
+
+<!-- neu chuc nang ong chua lam xong thi nhu nay
+khi ong an vao no không chuyển trang // để trắng là nó ngáo lỗi page luôn
+nếu ông để "/" về trang chủ luôn
+cái đó thì phải là dữ liệu trong data :)) có thêm cột kiểu người
+:)) hoặc ko ông có thể dùng else if-->
+<!--
+    type = forms.ChoiceField(label="chức vụ",choice=(('admin','admin'),('','')...))
+    lúc này type trả về giá trị ông chọn :)) r tự xử nhé Vd
+    type = admin -> render đến admin.html
+    type = cash.. -> cas,,,, đó
+    project ô đơn giản:)) nên hết r :v :)) chức ô may mắn :))) làm xong còn AI
+    :)) mong ô làm ổn hơn cái django này :V ok :V pp tui nghỉ
+-->
+{% endblock %}
+
